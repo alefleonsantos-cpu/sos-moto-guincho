@@ -102,224 +102,7 @@
 }
 </script>
 
-<style>
-:root{
-  --asfalto:#141414;
-  --asfalto-2:#1c1c1e;
-  --linha:#2c2c2f;
-  --amarelo:#ffc72c;
-  --amarelo-2:#f0b400;
-  --creme:#f4efe4;
-  --creme-2:#e9e2d2;
-  --tinta:#161616;
-  --cinza:#5e5a52;
-  --zap:#1fbe5a;
-  --zap-2:#17a34c;
-  --cinta:#e8452c;
-  --placa:#0f6b3a;
-  --display:"Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
-  --corpo:"Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font-family:var(--corpo);font-size:17px;line-height:1.6;color:var(--tinta);background:var(--creme)}
-img,svg{display:block;max-width:100%}
-a{color:inherit}
-.wrap{width:min(1160px, 100% - 32px);margin-inline:auto}
-h1,h2,h3{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase;letter-spacing:.01em;margin:0}
-h2{font-size:clamp(40px, 6vw, 68px)}
-h3{font-size:28px;font-weight:800;line-height:1}
-p{margin:0}
-.ico{width:22px;height:22px;flex:none}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
-
-/* ---------- botões ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:6px;font-weight:800;font-size:17px;text-decoration:none;letter-spacing:.01em;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;border:2px solid transparent;white-space:nowrap}
-.btn:hover{transform:translate(-2px,-2px)}
-.btn--zap{background:var(--zap);color:#fff;box-shadow:4px 4px 0 #0a4d23}
-.btn--zap:hover{background:var(--zap-2);box-shadow:6px 6px 0 #0a4d23}
-.btn--amarelo{background:var(--amarelo);color:var(--tinta);box-shadow:4px 4px 0 #000}
-.btn--amarelo:hover{box-shadow:6px 6px 0 #000}
-.btn--linha{border-color:var(--creme);color:var(--creme)}
-.btn--linha:hover{background:var(--creme);color:var(--tinta)}
-.btn--escuro{background:var(--tinta);color:var(--amarelo);box-shadow:4px 4px 0 rgba(0,0,0,.35)}
-.btn--sm{min-height:44px;padding:0 16px;font-size:15px}
-
-/* ---------- topo ---------- */
-.topbar{background:var(--amarelo);color:var(--tinta);font-size:14px;font-weight:600}
-.topbar__in{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:36px}
-.topbar a{font-weight:800;text-decoration:none}
-.ao-vivo{display:inline-flex;align-items:center;gap:8px}
-.ao-vivo i{width:9px;height:9px;border-radius:50%;background:#0d8a3c;box-shadow:0 0 0 0 rgba(13,138,60,.6);animation:pulsa 1.8s infinite}
-@keyframes pulsa{70%{box-shadow:0 0 0 9px rgba(13,138,60,0)}100%{box-shadow:0 0 0 0 rgba(13,138,60,0)}}
-
-.header{position:sticky;top:0;z-index:30;background:rgba(20,20,20,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
-.header__in{display:flex;align-items:center;gap:24px;min-height:68px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--creme);margin-right:auto}
-.logo svg{width:40px;height:40px}
-.logo b{display:block;font-family:var(--display);font-weight:900;font-size:24px;line-height:.9;text-transform:uppercase;letter-spacing:.02em}
-.logo small{display:block;font-size:12px;font-weight:600;color:var(--amarelo);letter-spacing:.14em;text-transform:uppercase}
-.nav{display:flex;gap:26px}
-.nav a{color:#cfc9bc;text-decoration:none;font-weight:600;font-size:15px}
-.nav a:hover{color:var(--amarelo)}
-
-/* ---------- hero ---------- */
-.hero{position:relative;background:
-  radial-gradient(900px 520px at 78% 45%, rgba(255,199,44,.13), transparent 60%),
-  var(--asfalto);color:var(--creme);overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;opacity:.07;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.hero__grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:72px 0 88px}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--amarelo)}
-.kicker::before{content:"";width:28px;height:3px;background:var(--amarelo)}
-.hero h1{font-size:clamp(52px, 8.4vw, 104px);margin:18px 0 22px}
-.hero h1 span{display:block;color:var(--amarelo)}
-.lead{font-size:19px;color:#d8d2c4;max-width:34em}
-.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-.selos{list-style:none;padding:0;margin:30px 0 0;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:15px;font-weight:600;color:#cfc9bc}
-.selos li{display:flex;align-items:center;gap:8px}
-.selos li::before{content:"";width:16px;height:16px;flex:none;background:var(--amarelo);clip-path:polygon(14% 52%,0 66%,38% 100%,100% 22%,86% 8%,38% 72%)}
-
-.hero__arte{position:relative}
-.hero__24{position:absolute;right:-10px;top:-40px;font-family:var(--display);font-weight:900;font-size:clamp(150px, 21vw, 290px);line-height:.8;color:transparent;-webkit-text-stroke:2px rgba(255,199,44,.28);user-select:none;pointer-events:none}
-.cena{position:relative;width:100%;height:auto}
-.faixa{height:22px;background:repeating-linear-gradient(-45deg, var(--amarelo) 0 22px, var(--asfalto) 22px 44px)}
-
-/* animação de entrada */
-@media (prefers-reduced-motion: no-preference){
-  .hero .kicker,.hero .lead,.hero .ctas,.hero .selos{animation:sobe .7s cubic-bezier(.2,.7,.2,1) both}
-  .hero .lead{animation-delay:.1s}
-  .hero .ctas{animation-delay:.2s}
-  .hero .selos{animation-delay:.3s}
-  .moto{animation:chega 1.2s .35s cubic-bezier(.22,.85,.25,1) both}
-  .roda{transform-box:fill-box;transform-origin:center;animation:gira 1.2s .35s cubic-bezier(.22,.85,.25,1) both}
-  .cintas path{stroke-dasharray:240;stroke-dashoffset:240;animation:prende .5s 1.5s ease-out forwards}
-  .hero__24{animation:aparece 1.4s .2s ease both}
-}
-@keyframes sobe{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-@keyframes chega{from{transform:translateX(70%);opacity:0}25%{opacity:1}to{transform:none}}
-@keyframes gira{from{transform:rotate(540deg)}to{transform:rotate(0)}}
-@keyframes prende{to{stroke-dashoffset:0}}
-@keyframes aparece{from{opacity:0}to{opacity:1}}
-
-/* ---------- seções ---------- */
-section{scroll-margin-top:80px}
-.secao{padding:96px 0}
-.rotulo{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--cinza);margin-bottom:14px}
-.intro{max-width:40em;margin-top:18px;font-size:18px;color:#3d3a34}
-
-/* passos */
-.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:52px;border-top:3px solid var(--tinta)}
-.passo{padding:28px 28px 8px 0;position:relative}
-.passo + .passo{padding-left:28px;border-left:1px solid #cfc6b3}
-.passo__n{font-family:var(--display);font-weight:900;font-size:84px;line-height:.8;color:var(--amarelo-2);-webkit-text-stroke:2px var(--tinta);display:block;margin-bottom:14px}
-.passo h3{margin-bottom:10px}
-.passo p{color:#3d3a34}
-
-/* serviços */
-.servicos{background:var(--creme-2)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
-.card{background:var(--creme);border:2px solid var(--tinta);border-radius:8px;padding:28px;box-shadow:6px 6px 0 var(--tinta);transition:transform .15s ease, box-shadow .15s ease}
-.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--tinta)}
-.card__ico{width:54px;height:54px;border-radius:50%;background:var(--amarelo);display:grid;place-items:center;margin-bottom:20px;border:2px solid var(--tinta)}
-.card__ico svg{width:28px;height:28px}
-.card h3{margin-bottom:10px}
-.card p{color:#3d3a34;font-size:16px}
-
-/* por que só moto */
-.porque{background:var(--asfalto);color:var(--creme);position:relative;overflow:hidden}
-.porque__grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.porque .rotulo{color:var(--amarelo)}
-.frase{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(44px, 6.4vw, 84px);line-height:.9}
-.frase em{font-style:normal;color:var(--amarelo)}
-.porque p{color:#d8d2c4;font-size:18px}
-.lista{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:16px}
-.lista li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;padding:18px;border:1px solid var(--linha);border-radius:8px;background:var(--asfalto-2)}
-.lista b{display:block;color:var(--creme);font-size:17px}
-.lista span{color:#b8b2a5;font-size:15px}
-.lista .num{font-family:var(--display);font-weight:900;font-size:34px;line-height:1;color:var(--amarelo)}
-
-/* áreas */
-.areas__grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;margin-top:48px}
-.areas h3{font-size:24px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
-.chips li{background:#fff;border:1.5px solid #cbbfa6;border-radius:999px;padding:6px 14px;font-size:15px;font-weight:600}
-.placas{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0 0 36px}
-.placas li{background:var(--placa);color:#fff;border-radius:6px;padding:8px 14px;font-weight:800;font-size:15px;box-shadow:inset 0 0 0 2px var(--placa), inset 0 0 0 4px #fff}
-.rodovias{display:grid;gap:10px;list-style:none;padding:0;margin:0}
-.rodovias li{display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px}
-.escudo{flex:none;display:grid;place-items:center;width:58px;height:44px;background:#fff;border:2.5px solid var(--tinta);border-radius:8px 8px 22px 22px;font-family:var(--display);font-weight:900;font-size:19px;line-height:.85;text-align:center}
-.escudo small{display:block;font-size:11px}
-
-/* faq */
-.faq{background:var(--creme-2)}
-.faq__grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
-.faq__lista{border-top:2px solid var(--tinta)}
-.faq details{border-bottom:2px solid var(--tinta)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-weight:800;font-size:19px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";flex:none;width:30px;height:30px;border-radius:50%;background:var(--amarelo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23161616' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/16px no-repeat;border:2px solid var(--tinta);transition:transform .2s ease}
-.faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{padding:0 0 24px;color:#3d3a34;max-width:40em}
-
-/* cta final */
-.final{background:var(--amarelo);color:var(--tinta);position:relative}
-.final::before,.final::after{content:"";position:absolute;left:0;right:0;height:16px;background:repeating-linear-gradient(-45deg, var(--tinta) 0 16px, var(--amarelo) 16px 32px)}
-.final::before{top:0}
-.final::after{bottom:0}
-.final__in{display:flex;justify-content:space-between;align-items:center;gap:32px;padding:88px 0}
-.final h2{font-size:clamp(46px, 7vw, 92px)}
-.final p{font-size:19px;font-weight:600;margin-top:12px}
-.final .ctas{margin-top:0;flex-direction:column;align-items:stretch;min-width:300px}
-.btn--zap.final-zap{box-shadow:4px 4px 0 var(--tinta)}
-
-/* rodapé */
-.rodape{background:var(--asfalto);color:#b8b2a5;padding:64px 0 32px;font-size:15px}
-.rodape__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-.rodape h3{font-size:20px;color:var(--creme);margin-bottom:14px}
-.rodape a{text-decoration:none}
-.rodape a:hover{color:var(--amarelo)}
-.rodape ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
-.rodape__base{border-top:1px solid var(--linha);margin-top:48px;padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
-
-/* whatsapp flutuante e barra mobile */
-.zap-flutua{position:fixed;right:24px;bottom:24px;z-index:40;width:64px;height:64px;border-radius:50%;background:var(--zap);display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.3);transition:transform .15s ease}
-.zap-flutua:hover{transform:scale(1.08)}
-.zap-flutua svg{width:34px;height:34px;fill:#fff}
-.barra-mobile{display:none}
-
-/* ---------- responsivo ---------- */
-@media (max-width: 980px){
-  .hero__grid{grid-template-columns:1fr;padding:48px 0 56px;gap:28px}
-  .hero__arte{max-width:520px;margin-inline:auto;width:100%;margin-top:24px}
-  .hero__24{top:-20px;font-size:clamp(110px, 30vw, 200px)}
-  .cards{grid-template-columns:1fr 1fr}
-  .porque__grid,.areas__grid,.faq__grid{grid-template-columns:1fr;gap:36px}
-  .final__in{flex-direction:column;align-items:flex-start}
-  .final .ctas{min-width:0;width:100%}
-  .rodape__grid{grid-template-columns:1fr 1fr}
-}
-@media (max-width: 760px){
-  body{font-size:16px;padding-bottom:76px}
-  .nav,.header .btn,.zap-flutua{display:none}
-  .topbar__in{justify-content:center}
-  .topbar a{display:none}
-  .header__in{min-height:60px}
-  .kicker{font-size:12px;letter-spacing:.1em}
-  .kicker::before{width:18px}
-  .hero h1{margin:14px 0 18px}
-  .lead{font-size:17px}
-  .ctas .btn{flex:1 1 100%}
-  .secao{padding:72px 0}
-  .passos{grid-template-columns:1fr;border-top:0}
-  .passo,.passo + .passo{padding:24px 0;border-left:0;border-top:2px solid var(--tinta)}
-  .cards{grid-template-columns:1fr}
-  .rodape__grid{grid-template-columns:1fr}
-  .barra-mobile{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(20,20,20,.96);border-top:3px solid var(--amarelo)}
-  .barra-mobile a{min-height:52px;font-size:16px;box-shadow:none}
-}
-</style>
+<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
@@ -472,11 +255,13 @@ section{scroll-margin-top:80px}
         <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
         <h3>Reboque de moto quebrada</h3>
         <p>Moto não liga, travou ou apagou no meio do caminho? Levamos até a oficina de sua confiança, concessionária ou sua casa.</p>
+        <a class="card__link" href="reboque-de-moto-sorocaba/">Reboque de moto →</a>
       </article>
       <article class="card">
         <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 20h20L12 3z"/><path d="M12 10v4M12 17.5v.01"/></svg></div>
         <h3>Moto acidentada</h3>
         <p>Remoção cuidadosa de motos batidas ou caídas, mesmo com roda travada, garfo torto ou carenagem quebrada.</p>
+        <a class="card__link" href="socorro-de-moto-sorocaba/">Socorro de moto →</a>
       </article>
       <article class="card">
         <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v5.5M12 15.5V21M3 12h5.5M15.5 12H21"/></svg></div>
@@ -487,11 +272,13 @@ section{scroll-margin-top:80px}
         <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M3 21h12M7 8h4"/><path d="M14 10h2a2 2 0 0 1 2 2v4a1.5 1.5 0 0 0 3 0V8l-3-3"/></svg></div>
         <h3>Pane seca ou elétrica</h3>
         <p>Acabou a gasolina, a bateria arriou ou deu problema elétrico? Chame que a gente resolve o transporte.</p>
+        <a class="card__link" href="moto-socorro-24-horas/">Moto socorro 24 horas →</a>
       </article>
       <article class="card">
         <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
         <h3>Transporte de moto</h3>
         <p>Comprou, vendeu ou vai levar a moto para revisão? Fazemos o transporte com segurança em Sorocaba ou para outras cidades.</p>
+        <a class="card__link" href="transporte-de-moto-sorocaba/">Transporte de moto →</a>
       </article>
       <article class="card">
         <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16" r="3.5"/><circle cx="18.5" cy="16" r="3.5"/><path d="M5.5 16l4-6h6l3 6M12 10l-1.5-4H8M15.5 10l2-3"/></svg></div>
@@ -549,6 +336,7 @@ section{scroll-margin-top:80px}
           <li><span class="escudo"><span><small>SP</small>75</span></span>Rodovia Sen. José Ermírio de Moraes (Castelinho)</li>
           <li><span class="escudo"><span><small>SP</small>264</span></span>Rodovia João Leme dos Santos</li>
         </ul>
+        <p class="areas__mais">Está em Votorantim? Veja o <a href="guincho-de-moto-votorantim/">guincho de moto em Votorantim</a>.</p>
       </div>
     </div>
   </div>
@@ -625,10 +413,13 @@ section{scroll-margin-top:80px}
         </ul>
       </div>
       <div>
-        <h3>Navegue</h3>
+        <h3>Serviços</h3>
         <ul>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#areas">Bairros e cidades atendidas</a></li>
+          <li><a href="socorro-de-moto-sorocaba/">Socorro de moto</a></li>
+          <li><a href="reboque-de-moto-sorocaba/">Reboque de moto</a></li>
+          <li><a href="transporte-de-moto-sorocaba/">Transporte de moto</a></li>
+          <li><a href="moto-socorro-24-horas/">Moto socorro 24 horas</a></li>
+          <li><a href="guincho-de-moto-votorantim/">Guincho de moto em Votorantim</a></li>
           <li><a href="#duvidas">Perguntas frequentes</a></li>
         </ul>
       </div>
