@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alefleonsantos-cpu.github.io/sos-moto-guincho/sitemap.xml
+Sitemap: https://sos-moto-guincho.vercel.app/sitemap.xml
