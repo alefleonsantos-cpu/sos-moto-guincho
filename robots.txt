@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.seudominio.com.br/sitemap.xml
+Sitemap: https://alefleonsantos-cpu.github.io/sos-moto-guincho/sitemap.xml
